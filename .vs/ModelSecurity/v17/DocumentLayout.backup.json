@@ -1,52 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Santiago\\source\\repos\\Diagram\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{05A3CCD6-ABBA-4C22-8CDE-9F29AF4D2B3F}|Diagram\\Diagram.csproj|c:\\users\\santiago\\source\\repos\\diagram\\diagram\\dbmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{05A3CCD6-ABBA-4C22-8CDE-9F29AF4D2B3F}|Diagram\\Diagram.csproj|solutionrelative:diagram\\dbmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05A3CCD6-ABBA-4C22-8CDE-9F29AF4D2B3F}|Diagram\\Diagram.csproj|c:\\users\\santiago\\source\\repos\\diagram\\diagram\\dbmodel_propio.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{05A3CCD6-ABBA-4C22-8CDE-9F29AF4D2B3F}|Diagram\\Diagram.csproj|solutionrelative:diagram\\dbmodel_propio.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DbModel_propio.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Diagram\\DbModel_propio.edmx",
-              "RelativeDocumentMoniker": "Diagram\\DbModel_propio.edmx",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Diagram\\DbModel_propio.edmx [Diagram1]",
-              "RelativeToolTip": "Diagram\\DbModel_propio.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-03-27T00:12:48.117Z",
-              "EditorCaption": " [Diagram1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DbModel.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Diagram\\DbModel.edmx",
-              "RelativeDocumentMoniker": "Diagram\\DbModel.edmx",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Diagram\\DbModel.edmx [Diagram1]",
-              "RelativeToolTip": "Diagram\\DbModel.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-03-27T00:12:28.412Z",
-              "EditorCaption": " [Diagram1]"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

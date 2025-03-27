@@ -1,4 +1,4 @@
-﻿namespace Entity
+﻿namespace Entity.Model
 {
     public class Module
     {

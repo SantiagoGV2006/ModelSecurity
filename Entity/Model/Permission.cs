@@ -1,15 +1,19 @@
-﻿namespace Entity
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Entity.Model
 {
-    public class Permission
+    public enum Permission
     {
+        [Display(Name = "Create")]
+        Neighbourhoods = 1,
 
-        public int Id { get; set; }
-        public required string CanCreate { get; set; }
-        public required string CanRead { get; set; }
-        public required string CanUpdate { get; set; }
-        public required string CanDelete { get; set; }
-        public DateTime CreateAt { get; set; }
-        public DateTime DeleteAt { get; set; }
+        [Display(Name = "Read")]
+        CreateNeighbourhoods = 2,
 
+        [Display(Name = "Update")]
+        EditNeighbourhoods = 3,
+
+        [Display(Name = "Delete")]
+        DeleteNeighbourhoods = 4,
     }
 }
