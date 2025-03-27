@@ -3,6 +3,62 @@
   "WorkspaceRootPath": "C:\\Users\\Santiago\\source\\repos\\Diagram\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|c:\\users\\santiago\\source\\repos\\diagram\\data\\rolformpermissiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|solutionrelative:data\\rolformpermissiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|c:\\users\\santiago\\source\\repos\\diagram\\data\\formmoduledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|solutionrelative:data\\formmoduledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\rolformpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\rolformpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|c:\\users\\santiago\\source\\repos\\diagram\\data\\roluserdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|solutionrelative:data\\roluserdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\formmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\formmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|c:\\users\\santiago\\source\\repos\\diagram\\data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|solutionrelative:data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|c:\\users\\santiago\\source\\repos\\diagram\\data\\formdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|solutionrelative:data\\formdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\roluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\roluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|c:\\users\\santiago\\source\\repos\\diagram\\data\\moduledata - copia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|solutionrelative:data\\moduledata - copia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|c:\\users\\santiago\\source\\repos\\diagram\\data\\moduledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|solutionrelative:data\\moduledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|c:\\users\\santiago\\source\\repos\\diagram\\data\\roldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96762995-D5AB-492A-B850-0EACE30E4BAE}|Data\\Data.csproj|solutionrelative:data\\roldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\dto\\rolformpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\rolformpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\enum\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\enum\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\dto\\formmoduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\formmoduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\dto\\rolformpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\rolformpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\dto\\roluserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\roluserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,24 +87,8 @@
       "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\permission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\rolformpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\rolformpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\roluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\roluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\formmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|solutionrelative:entity\\model\\formmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A37DAFAE-BA9B-4C8D-880D-9E9E27280929}|Entity\\Entity.csproj|c:\\users\\santiago\\source\\repos\\diagram\\entity\\model\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,58 +107,175 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RolFormPermissionData.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\RolFormPermissionData.cs",
+              "RelativeDocumentMoniker": "Data\\RolFormPermissionData.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\RolFormPermissionData.cs",
+              "RelativeToolTip": "Data\\RolFormPermissionData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T17:02:24.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormModuleData.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\FormModuleData.cs",
+              "RelativeDocumentMoniker": "Data\\FormModuleData.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\FormModuleData.cs",
+              "RelativeToolTip": "Data\\FormModuleData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T17:00:06.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RolUserData.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\RolUserData.cs",
+              "RelativeDocumentMoniker": "Data\\RolUserData.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\RolUserData.cs",
+              "RelativeToolTip": "Data\\RolUserData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T16:53:03.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ModuleData - Copia.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\ModuleData - Copia.cs",
+              "RelativeDocumentMoniker": "Data\\ModuleData - Copia.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\ModuleData - Copia.cs",
+              "RelativeToolTip": "Data\\ModuleData - Copia.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAowG4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T16:45:46.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ModuleData.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\ModuleData.cs",
+              "RelativeDocumentMoniker": "Data\\ModuleData.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\ModuleData.cs",
+              "RelativeToolTip": "Data\\ModuleData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T16:36:16.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormData.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\FormData.cs",
+              "RelativeDocumentMoniker": "Data\\FormData.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\FormData.cs",
+              "RelativeToolTip": "Data\\FormData.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAswG4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T16:33:26.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\UserData.cs",
+              "RelativeDocumentMoniker": "Data\\UserData.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\UserData.cs",
+              "RelativeToolTip": "Data\\UserData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T16:26:46.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RolFormPermission.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\RolFormPermission.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\RolFormPermission.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\RolFormPermission.cs",
+              "RelativeToolTip": "Entity\\Model\\RolFormPermission.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:46:01.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RolData.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\RolData.cs",
+              "RelativeDocumentMoniker": "Data\\RolData.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Data\\RolData.cs",
+              "RelativeToolTip": "Data\\RolData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:16:47.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormModule.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\FormModule.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\FormModule.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\FormModule.cs",
+              "RelativeToolTip": "Entity\\Model\\FormModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:42:00.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Contexts\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Entity\\Contexts\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Contexts\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Entity\\Contexts\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:59:50.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RolUser.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\RolUser.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\RolUser.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\RolUser.cs",
+              "RelativeToolTip": "Entity\\Model\\RolUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:44:42.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "FormModuleDTO.cs",
               "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\FormModuleDTO.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\FormModuleDTO.cs",
               "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\FormModuleDTO.cs",
               "RelativeToolTip": "Entity\\DTO\\FormModuleDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T05:57:45.951Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PersonDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\PersonDTO.cs",
-              "RelativeDocumentMoniker": "Entity\\DTO\\PersonDTO.cs",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\PersonDTO.cs",
-              "RelativeToolTip": "Entity\\DTO\\PersonDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T05:56:51.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RolFormPermissionDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\RolFormPermissionDTO.cs",
-              "RelativeDocumentMoniker": "Entity\\DTO\\RolFormPermissionDTO.cs",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\RolFormPermissionDTO.cs",
-              "RelativeToolTip": "Entity\\DTO\\RolFormPermissionDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T05:55:26.693Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RolUserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\RolUserDTO.cs",
-              "RelativeDocumentMoniker": "Entity\\DTO\\RolUserDTO.cs",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\RolUserDTO.cs",
-              "RelativeToolTip": "Entity\\DTO\\RolUserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T05:54:40.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\UserDTO.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\UserDTO.cs",
@@ -135,25 +288,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RolFormPermission.cs",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\RolFormPermission.cs",
-              "RelativeDocumentMoniker": "Entity\\Model\\RolFormPermission.cs",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\RolFormPermission.cs",
-              "RelativeToolTip": "Entity\\Model\\RolFormPermission.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T05:46:01.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Permission.cs",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\Permission.cs",
-              "RelativeDocumentMoniker": "Entity\\Model\\Permission.cs",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\Permission.cs",
-              "RelativeToolTip": "Entity\\Model\\Permission.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Enum\\Permission.cs",
+              "RelativeDocumentMoniker": "Entity\\Enum\\Permission.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Enum\\Permission.cs",
+              "RelativeToolTip": "Entity\\Enum\\Permission.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T05:43:08.274Z",
@@ -161,7 +301,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
+              "Title": "RolFormPermissionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\RolFormPermissionDTO.cs",
+              "RelativeDocumentMoniker": "Entity\\DTO\\RolFormPermissionDTO.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\RolFormPermissionDTO.cs",
+              "RelativeToolTip": "Entity\\DTO\\RolFormPermissionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:55:26.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RolUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\RolUserDTO.cs",
+              "RelativeDocumentMoniker": "Entity\\DTO\\RolUserDTO.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\RolUserDTO.cs",
+              "RelativeToolTip": "Entity\\DTO\\RolUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:54:40.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PersonDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\PersonDTO.cs",
+              "RelativeDocumentMoniker": "Entity\\DTO\\PersonDTO.cs",
+              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\DTO\\PersonDTO.cs",
+              "RelativeToolTip": "Entity\\DTO\\PersonDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T05:56:51.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Module.cs",
               "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\Module.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Module.cs",
@@ -174,20 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RolUser.cs",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\RolUser.cs",
-              "RelativeDocumentMoniker": "Entity\\Model\\RolUser.cs",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\RolUser.cs",
-              "RelativeToolTip": "Entity\\Model\\RolUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T05:44:42.52Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\Person.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Person.cs",
@@ -200,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "Form.cs",
               "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\Form.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Form.cs",
@@ -213,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 21,
               "Title": "Rol.cs",
               "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\Rol.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Rol.cs",
@@ -226,20 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FormModule.cs",
-              "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\FormModule.cs",
-              "RelativeDocumentMoniker": "Entity\\Model\\FormModule.cs",
-              "ToolTip": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\FormModule.cs",
-              "RelativeToolTip": "Entity\\Model\\FormModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T05:42:00.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Santiago\\source\\repos\\Diagram\\Entity\\Model\\User.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\User.cs",

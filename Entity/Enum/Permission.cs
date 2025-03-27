@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Entity.Model
+namespace Entity.Enum
 {
     public enum Permission
     {
