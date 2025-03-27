@@ -20,11 +20,6 @@
         <AssociationConnector Association="DbModel.RolFormPermissionForm" />
         <AssociationConnector Association="DbModel.RolFormPermissionPermission" />
         <AssociationConnector Association="DbModel.FormModuleModule" />
-        <EntityTypeShape EntityType="DbModel.Worker" Width="1.5" PointX="10.375" PointY="0.875" />
-        <EntityTypeShape EntityType="DbModel.Worker_Login" Width="1.5" PointX="14.25" PointY="0.75" />
-        <EntityTypeShape EntityType="DbModel.PQR" Width="1.5" PointX="17.25" PointY="1.125" />
-        <EntityTypeShape EntityType="DbModel.Client" Width="1.5" PointX="10.75" PointY="3.375" />
-        <EntityTypeShape EntityType="DbModel.Data_Update" Width="1.5" PointX="15.125" PointY="4" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

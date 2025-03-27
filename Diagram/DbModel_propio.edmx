@@ -49,11 +49,6 @@
             <End Role="FormModule" EntitySet="FormModules" />
             <End Role="Module" EntitySet="Modules" />
           </AssociationSet>
-          <EntitySet Name="Workers" EntityType="DbModel.Worker" />
-          <EntitySet Name="Worker_Logins" EntityType="DbModel.Worker_Login" />
-          <EntitySet Name="PQRs" EntityType="DbModel.PQR" />
-          <EntitySet Name="Clients" EntityType="DbModel.Client" />
-          <EntitySet Name="Data_Updates" EntityType="DbModel.Data_Update" />
         </EntityContainer>
         <EntityType Name="Form">
           <Key>
@@ -169,36 +164,6 @@
           <End Type="DbModel.FormModule" Role="FormModule" Multiplicity="*" />
           <End Type="DbModel.Module" Role="Module" Multiplicity="1" />
         </Association>
-        <EntityType Name="Worker">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="Worker_Login">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="PQR">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="Client">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="Data_Update">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
