@@ -1,5 +1,4 @@
 using Data;
-using Entity.Contexts;
 using Entity.DTOs;
 using Entity.Model;
 using Microsoft.Extensions.Logging;
@@ -13,59 +12,35 @@ namespace Business
 {
     public class ClientBusiness
     {
-        private readonly ClientData _clientData; // Clase que maneja las operaciones de base de datos
-        private readonly ILogger _logger;
+        private readonly ClientData _clientData;
+        private readonly ILogger<ClientBusiness> _logger;
 
-        // Constructor que recibe la instancia de ClientData y ILogger
         public ClientBusiness(ClientData clientData, ILogger<ClientBusiness> logger)
         {
             _clientData = clientData ?? throw new ArgumentNullException(nameof(clientData));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        /// <summary>
-        /// Obtiene todos los clientes.
-        /// </summary>
-        /// <returns>Lista de clientes en formato DTO.</returns>
         public async Task<IEnumerable<ClientDto>> GetAllClientsAsync()
         {
             try
             {
                 var clients = await _clientData.GetAllAsync();
-                var clientsDto = clients.Select(client => new ClientDto
-                {
-                    ClientId = client.ClientId,
-                    FirstName = client.FirstName,
-                    LastName = client.LastName,
-                    IdentityDocument = client.IdentityDocument,
-                    ClientType = client.ClientType,
-                    Phone = client.Phone,
-                    Email = client.Email,
-                    Address = client.Address,
-                    SocioeconomicStratification = client.SocioeconomicStratification ?? 0, // Usar 0 si es nulo
-                    RegistrationDate = client.RegistrationDate ?? DateTime.MinValue // Asumir una fecha mínima si es nula
-                }).ToList();
-
-                return clientsDto;
+                return MapToDTOList(clients);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error al obtener todos los clientes");
-                throw new ExternalServiceException("Base de datos", "Error al obtener los clientes", ex);
+                throw new ExternalServiceException("Base de datos", "Error al recuperar la lista de clientes", ex);
             }
         }
 
-        /// <summary>
-        /// Obtiene un cliente por su ID.
-        /// </summary>
-        /// <param name="id">ID del cliente.</param>
-        /// <returns>Cliente en formato DTO.</returns>
         public async Task<ClientDto> GetClientByIdAsync(int id)
         {
             if (id <= 0)
             {
                 _logger.LogWarning("Se intentó obtener un cliente con ID inválido: {ClientId}", id);
-                throw new ValidationException("id", "El ID del cliente debe ser mayor que cero.");
+                throw new ValidationException("id", "El ID del cliente debe ser mayor que cero");
             }
 
             try
@@ -73,181 +48,198 @@ namespace Business
                 var client = await _clientData.GetByIdAsync(id);
                 if (client == null)
                 {
-                    _logger.LogInformation("Cliente con ID {ClientId} no encontrado.", id);
+                    _logger.LogInformation("No se encontró ningún cliente con ID: {ClientId}", id);
                     throw new EntityNotFoundException("Cliente", id);
                 }
 
-                return new ClientDto
-                {
-                    ClientId = client.ClientId,
-                    FirstName = client.FirstName,
-                    LastName = client.LastName,
-                    IdentityDocument = client.IdentityDocument,
-                    ClientType = client.ClientType,
-                    Phone = client.Phone,
-                    Email = client.Email,
-                    Address = client.Address,
-                    SocioeconomicStratification = client.SocioeconomicStratification ?? 0,
-                    RegistrationDate = client.RegistrationDate ?? DateTime.MinValue
-                };
+                return MapToDTO(client);
+            }
+            catch (EntityNotFoundException)
+            {
+                throw;
+            }
+            catch (ValidationException)
+            {
+                throw;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al obtener el cliente con ID {ClientId}", id);
-                throw new ExternalServiceException("Base de datos", $"Error al obtener el cliente con ID {id}", ex);
+                _logger.LogError(ex, "Error al obtener el cliente con ID: {ClientId}", id);
+                throw new ExternalServiceException("Base de datos", $"Error al recuperar el cliente con ID {id}", ex);
             }
         }
 
-        /// <summary>
-        /// Crea un nuevo cliente.
-        /// </summary>
-        /// <param name="clientDto">DTO con la información del cliente.</param>
-        /// <returns>El cliente creado en formato DTO.</returns>
         public async Task<ClientDto> CreateClientAsync(ClientDto clientDto)
         {
             try
             {
-                ValidateClient(clientDto); // Validar los datos del cliente
+                ValidateClient(clientDto);
 
-                var client = new Client
-                {
-                    FirstName = clientDto.FirstName,
-                    LastName = clientDto.LastName,
-                    IdentityDocument = clientDto.IdentityDocument,
-                    ClientType = clientDto.ClientType,
-                    Phone = clientDto.Phone,
-                    Email = clientDto.Email,
-                    Address = clientDto.Address,
-                    SocioeconomicStratification = clientDto.SocioeconomicStratification,
-                    RegistrationDate = clientDto.RegistrationDate
-                };
+                var client = MapToEntity(clientDto);
+                var clienteCreado = await _clientData.CreateAsync(client);
 
-                var createdClient = await _clientData.CreateAsync(client);
-
-                return new ClientDto
-                {
-                    ClientId = createdClient.ClientId,
-                    FirstName = createdClient.FirstName,
-                    LastName = createdClient.LastName,
-                    IdentityDocument = createdClient.IdentityDocument,
-                    ClientType = createdClient.ClientType,
-                    Phone = createdClient.Phone,
-                    Email = createdClient.Email,
-                    Address = createdClient.Address,
-                    SocioeconomicStratification = createdClient.SocioeconomicStratification ?? 0,
-                    RegistrationDate = createdClient.RegistrationDate ?? DateTime.MinValue
-                };
+                return MapToDTO(clienteCreado);
+            }
+            catch (ValidationException)
+            {
+                throw;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al crear el cliente: {ClientName}", clientDto?.FirstName ?? "null");
+                _logger.LogError(ex, "Error al crear nuevo cliente: {ClientName} {ClientLastName}", 
+                    clientDto?.FirstName ?? "null", clientDto?.LastName ?? "null");
                 throw new ExternalServiceException("Base de datos", "Error al crear el cliente", ex);
             }
         }
 
-        /// <summary>
-        /// Actualiza un cliente existente.
-        /// </summary>
-        /// <param name="clientDto">DTO con la información actualizada del cliente.</param>
-        /// <returns>True si la actualización fue exitosa.</returns>
         public async Task<bool> UpdateClientAsync(ClientDto clientDto)
         {
+            if (clientDto.ClientId <= 0)
+            {
+                _logger.LogWarning("Se intentó actualizar un cliente con ID inválido: {ClientId}", clientDto.ClientId);
+                throw new ValidationException("id", "El ID del cliente debe ser mayor que cero");
+            }
+
             try
             {
-                var existingClient = await _clientData.GetByIdAsync(clientDto.ClientId);
-                if (existingClient == null)
+                ValidateClient(clientDto);
+
+                // Verificar si el cliente existe
+                var clienteExistente = await _clientData.GetByIdAsync(clientDto.ClientId);
+                if (clienteExistente == null)
                 {
-                    _logger.LogWarning("Cliente con ID {ClientId} no encontrado.", clientDto.ClientId);
+                    _logger.LogInformation("No se encontró ningún cliente con ID: {ClientId}", clientDto.ClientId);
                     throw new EntityNotFoundException("Cliente", clientDto.ClientId);
                 }
 
-                existingClient.FirstName = clientDto.FirstName;
-                existingClient.LastName = clientDto.LastName;
-                existingClient.IdentityDocument = clientDto.IdentityDocument;
-                existingClient.ClientType = clientDto.ClientType;
-                existingClient.Phone = clientDto.Phone;
-                existingClient.Email = clientDto.Email;
-                existingClient.Address = clientDto.Address;
-                existingClient.SocioeconomicStratification = clientDto.SocioeconomicStratification;
-                existingClient.RegistrationDate = clientDto.RegistrationDate;
+                var client = MapToEntity(clientDto);
+                var actualizado = await _clientData.UpdateAsync(client);
 
-                var updated = await _clientData.UpdateAsync(existingClient);
-
-                return updated;
+                return actualizado;
+            }
+            catch (EntityNotFoundException)
+            {
+                throw;
+            }
+            catch (ValidationException)
+            {
+                throw;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al actualizar el cliente con ID {ClientId}", clientDto.ClientId);
-                throw new ExternalServiceException("Base de datos", "Error al actualizar el cliente", ex);
+                _logger.LogError(ex, "Error al actualizar el cliente con ID: {ClientId}", clientDto.ClientId);
+                throw new ExternalServiceException("Base de datos", $"Error al actualizar el cliente con ID {clientDto.ClientId}", ex);
             }
         }
 
-        /// <summary>
-        /// Elimina un cliente.
-        /// </summary>
-        /// <param name="id">ID del cliente a eliminar.</param>
-        /// <returns>True si la eliminación fue exitosa.</returns>
         public async Task<bool> DeleteClientAsync(int id)
         {
+            if (id <= 0)
+            {
+                _logger.LogWarning("Se intentó eliminar un cliente con ID inválido: {ClientId}", id);
+                throw new ValidationException("id", "El ID del cliente debe ser mayor que cero");
+            }
+
             try
             {
-                var client = await _clientData.GetByIdAsync(id);
-                if (client == null)
+                // Verificar si el cliente existe
+                var clienteExistente = await _clientData.GetByIdAsync(id);
+                if (clienteExistente == null)
                 {
-                    _logger.LogWarning("Cliente con ID {ClientId} no encontrado.", id);
+                    _logger.LogInformation("No se encontró ningún cliente con ID: {ClientId}", id);
                     throw new EntityNotFoundException("Cliente", id);
                 }
 
-                var deleted = await _clientData.DeleteAsync(id);
-                return deleted;
+                return await _clientData.DeleteAsync(id);
+            }
+            catch (EntityNotFoundException)
+            {
+                throw;
+            }
+            catch (ValidationException)
+            {
+                throw;
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error al eliminar el cliente con ID {ClientId}", id);
-                throw new ExternalServiceException("Base de datos", "Error al eliminar el cliente", ex);
+                _logger.LogError(ex, "Error al eliminar el cliente con ID: {ClientId}", id);
+                throw new ExternalServiceException("Base de datos", $"Error al eliminar el cliente con ID {id}", ex);
             }
         }
 
-        /// <summary>
-        /// Método para validar el DTO del cliente.
-        /// </summary>
         private void ValidateClient(ClientDto clientDto)
         {
             if (clientDto == null)
             {
-                _logger.LogWarning("Se intentó crear o actualizar un cliente con datos nulos.");
-                throw new ValidationException("clientDto", "El cliente no puede ser nulo.");
+                throw new ValidationException("El objeto cliente no puede ser nulo");
             }
 
             if (string.IsNullOrWhiteSpace(clientDto.FirstName))
             {
-                _logger.LogWarning("Se intentó crear o actualizar un cliente con FirstName vacío.");
-                throw new ValidationException("FirstName", "El nombre del cliente es obligatorio.");
+                _logger.LogWarning("Se intentó crear/actualizar un cliente con FirstName vacío");
+                throw new ValidationException("FirstName", "El nombre del cliente es obligatorio");
             }
 
             if (string.IsNullOrWhiteSpace(clientDto.LastName))
             {
-                _logger.LogWarning("Se intentó crear o actualizar un cliente con LastName vacío.");
-                throw new ValidationException("LastName", "El apellido del cliente es obligatorio.");
+                _logger.LogWarning("Se intentó crear/actualizar un cliente con LastName vacío");
+                throw new ValidationException("LastName", "El apellido del cliente es obligatorio");
             }
 
             if (string.IsNullOrWhiteSpace(clientDto.Email))
             {
-                _logger.LogWarning("Se intentó crear o actualizar un cliente con Email vacío.");
-                throw new ValidationException("Email", "El email del cliente es obligatorio.");
+                _logger.LogWarning("Se intentó crear/actualizar un cliente con Email vacío");
+                throw new ValidationException("Email", "El email del cliente es obligatorio");
             }
 
             if (string.IsNullOrWhiteSpace(clientDto.IdentityDocument))
             {
-                _logger.LogWarning("Se intentó crear o actualizar un cliente con IdentityDocument vacío.");
-                throw new ValidationException("IdentityDocument", "El documento de identidad del cliente es obligatorio.");
+                _logger.LogWarning("Se intentó crear/actualizar un cliente con IdentityDocument vacío");
+                throw new ValidationException("IdentityDocument", "El documento de identidad del cliente es obligatorio");
             }
 
             if (clientDto.Phone <= 0)
             {
-                _logger.LogWarning("Se intentó crear o actualizar un cliente con Phone inválido.");
-                throw new ValidationException("Phone", "El número de teléfono del cliente es obligatorio.");
+                _logger.LogWarning("Se intentó crear/actualizar un cliente con Phone inválido");
+                throw new ValidationException("Phone", "El número de teléfono del cliente es obligatorio y debe ser válido");
             }
+        }
+
+        private ClientDto MapToDTO(Client client)
+        {
+            return new ClientDto
+            {
+                ClientId = client.ClientId,
+                FirstName = client.FirstName,
+                LastName = client.LastName,
+                IdentityDocument = client.IdentityDocument,
+                ClientType = client.ClientType,
+                Phone = client.Phone,
+                Email = client.Email,
+                Address = client.Address,
+                SocioeconomicStratification = client.SocioeconomicStratification ?? 0,
+            };
+        }
+
+        private Client MapToEntity(ClientDto clientDto)
+        {
+            return new Client
+            {
+                ClientId = clientDto.ClientId,
+                FirstName = clientDto.FirstName,
+                LastName = clientDto.LastName,
+                IdentityDocument = clientDto.IdentityDocument,
+                ClientType = clientDto.ClientType,
+                Phone = clientDto.Phone,
+                Email = clientDto.Email,
+                Address = clientDto.Address,
+                SocioeconomicStratification = clientDto.SocioeconomicStratification,
+            };
+        }
+
+        private IEnumerable<ClientDto> MapToDTOList(IEnumerable<Client> clients)
+        {
+            return clients.Select(client => MapToDTO(client)).ToList();
         }
     }
 }
