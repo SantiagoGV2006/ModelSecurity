@@ -1,5 +1,6 @@
 :root {
   /* Paleta de colores principal */
+  --is-dark-mode: 0;
   --primary: #614685;           /* Púrpura profundo */
   --primary-light: #8d75a3;     /* Lavanda */
   --primary-dark: #43305e;      /* Púrpura oscuro */
@@ -38,7 +39,36 @@
   --transition-medium: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-slow: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
+/* Dark mode color scheme */
+[data-theme="dark"] {
+  --primary: #8069a5;           /* Lighter purple */
+  --primary-light: #a594c1;     /* Very light lavender */
+  --primary-dark: #614685;      /* Maintained purple */
+  --secondary: #f0b76b;         /* Brighter amber */
+  --tertiary: #e05a6c;          /* Brighter coral */
+  --quaternary: #35c0b0;        /* Brighter turquoise */
+  
+  --success: #75b875;           /* Brighter green */
+  --warning: #ffc857;           /* Brighter yellow */
+  --danger: #e05858;            /* Brighter red */
+  --info: #5ea0c3;              /* Brighter blue */
+  
+  --dark: #f3f0f7;              /* Light color for text */
+  --light: #2c2936;             /* Dark background */
+  --gray: #9b97a4;              /* Maintained gray */
+  --gray-light: #3c3947;        /* Darker gray */
+  --gray-dark: #c8c4d2;         /* Lighter gray */
+  
+  --body-bg: #1a1825;           /* Very dark purple for background */
+  --card-bg: #252233;           /* Dark purple for cards */
+  --input-bg: #2c2a38;          /* Dark input background */
+  --border-color: #3e3a52;      /* Dark border */
+  
+  --text-primary: #f3f0f7;      /* Light color for text */
+  --text-secondary: #c8c4d2;    /* Slightly darker for secondary text */
+  
+  --is-dark-mode: 1;
+}
 /* Estilos generales */
 * {
   box-sizing: border-box;
@@ -1474,4 +1504,153 @@ textarea.form-control {
 @keyframes slideUp {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+/* Dark mode general styles */
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #1a1825, #252233);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .navbar {
+  background: linear-gradient(110deg, var(--primary-dark), #352849);
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .table td,
+[data-theme="dark"] .table th {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+  background-color: rgba(97, 70, 133, 0.15);
+}
+
+[data-theme="dark"] .modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: var(--input-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-check-input {
+  background-color: var(--input-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .card-footer {
+  background-color: rgba(45, 41, 66, 0.5);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: var(--card-bg) !important;
+}
+
+[data-theme="dark"] .toast {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .toast-header {
+  background-color: var(--primary-dark);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-secondary {
+  background: linear-gradient(135deg, #4c4956, #38353f);
+}
+
+[data-theme="dark"] .pagination .page-link {
+  background-color: var(--input-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .pagination .page-item.active .page-link {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+[data-theme="dark"] .form-floating > .form-control:focus ~ label,
+[data-theme="dark"] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+[data-theme="dark"] .form-floating > .form-select ~ label {
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .form-floating > label {
+  color: var(--text-secondary);
+}
+
+/* Dark mode adjustments for inputs */
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: rgba(155, 151, 164, 0.6);
+}
+
+/* Dark mode scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), var(--primary-dark));
+}
+
+/* Dark mode shadows */
+[data-theme="dark"] .shadow,
+[data-theme="dark"] .card,
+[data-theme="dark"] .btn:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Login form specific dark mode styles */
+[data-theme="dark"] .login-form-container {
+  background: linear-gradient(135deg, #1a1825, #252233);
+}
+
+[data-theme="dark"] .card.shadow-lg:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3) !important;
 }

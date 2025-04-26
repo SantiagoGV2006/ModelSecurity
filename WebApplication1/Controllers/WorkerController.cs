@@ -1,5 +1,6 @@
 using Business;
 using Entity.DTOs;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -156,6 +157,99 @@ namespace WebApplication1.Controllers
                 return StatusCode(500, new { message = $"Error al eliminar el trabajador con ID {id}" });
             }
         }
+
+        // DELETE PERMANENTE api/Worker/permanent/{id}
+[HttpDelete("permanent/{id}")]
+[ProducesResponseType(204)]
+[ProducesResponseType(400)]
+[ProducesResponseType(404)]
+[ProducesResponseType(500)]
+public async Task<IActionResult> PermanentDeleteWorker(int id)
+{
+    if (id <= 0)
+    {
+        return BadRequest(new { message = "El ID del trabajador debe ser mayor que cero" });
+    }
+
+    try
+    {
+        var result = await _workerBusiness.PermanentDeleteAsync(id);
+        if (!result)
+        {
+            return NotFound(new { message = $"No se encontró el trabajador con ID {id}" });
+        }
+
+        return NoContent();
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error al eliminar permanentemente el trabajador con ID: {WorkerId}", id);
+        return StatusCode(500, new { message = $"Error al eliminar permanentemente el trabajador con ID {id}" });
+    }
+}
+
+// PATCH api/Worker/{id}
+[HttpPatch("{id}")]
+[ProducesResponseType(typeof(WorkerDto), 200)]
+[ProducesResponseType(400)]
+[ProducesResponseType(404)]
+[ProducesResponseType(500)]
+public async Task<IActionResult> PartialUpdateWorker(int id, [FromBody] JsonPatchDocument<WorkerDto> patchDoc)
+{
+    if (patchDoc == null)
+    {
+        return BadRequest(new { message = "El objeto patch no puede ser nulo" });
+    }
+
+    // Validar que solo se pueden modificar campos específicos
+    var allowedPaths = new[] { "/FirstName", "/LastName", "/JobTitle", "/Email", "/Phone", "/HireDate" };
+
+    foreach (var op in patchDoc.Operations)
+    {
+        var trimmedPath = op.path.Trim();
+
+        if (!allowedPaths.Contains(trimmedPath, StringComparer.OrdinalIgnoreCase))
+        {
+            return BadRequest(new { message = $"Solo se permite modificar los siguientes campos: {string.Join(", ", allowedPaths)}" });
+        }
+    }
+
+    try
+    {
+        var existingWorker = await _workerBusiness.GetByIdAsync(id);
+        if (existingWorker == null)
+        {
+            return NotFound(new { message = $"No se encontró el trabajador con ID {id}" });
+        }
+
+        patchDoc.ApplyTo(existingWorker, error =>
+        {
+            ModelState.AddModelError(error.Operation.path, error.ErrorMessage);
+        });
+
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        var result = await _workerBusiness.UpdateAsync(existingWorker);
+        if (!result)
+        {
+            return NotFound(new { message = $"No se encontró el trabajador con ID {id}" });
+        }
+
+        return Ok(existingWorker);
+    }
+    catch (ArgumentException ex)
+    {
+        return BadRequest(new { message = ex.Message });
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error al actualizar parcialmente el trabajador con ID: {WorkerId}", id);
+        return StatusCode(500, new { message = $"Error al actualizar parcialmente el trabajador con ID {id}" });
+    }
+}
         
     }
 }

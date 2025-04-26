@@ -6,7 +6,6 @@
 let clientsData = [];
 let currentClientPage = 1;
 
-// Get all clients
 async function getAllClients() {
     try {
         showLoading();
@@ -17,6 +16,7 @@ async function getAllClients() {
     } catch (error) {
         console.error('Error fetching clients:', error);
         hideLoading();
+        showToast('Error', 'No se pudieron cargar los clientes', 'error');
     }
 }
 
@@ -240,6 +240,7 @@ function confirmDeleteClient(clientId, clientName) {
 }
 
 // Delete client
+// Ensure permanent delete is properly implemented
 async function deleteClient(clientId, isPermanent = false) {
     try {
         showLoading();
@@ -261,6 +262,7 @@ async function deleteClient(clientId, isPermanent = false) {
     } catch (error) {
         console.error('Error deleting client:', error);
         hideLoading();
+        showToast('Error', 'No se pudo eliminar el cliente', 'error');
     }
 }
 

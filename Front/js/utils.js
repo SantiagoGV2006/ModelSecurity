@@ -1,8 +1,3 @@
-/**
- * SecurityPQR System - Utility Functions
- * Este archivo contiene funciones de utilidad compartidas entre todas las páginas
- */
-
 // API Base URL
 const API_BASE_URL = 'http://localhost:5163/api';
 
@@ -21,6 +16,7 @@ const API_ENDPOINTS = {
     // Workers
     WORKERS: `${API_BASE_URL}/Worker`,
     WORKER_BY_ID: (id) => `${API_BASE_URL}/Worker/${id}`,
+    WORKER_PERMANENT_DELETE: (id) => `${API_BASE_URL}/Worker/permanent/${id}`,
     
     // Worker Logins
     WORKER_LOGINS: `${API_BASE_URL}/WorkerLogin`,
@@ -55,6 +51,7 @@ const API_ENDPOINTS = {
     // Form Modules
     FORM_MODULES: `${API_BASE_URL}/FormModule`,
     FORM_MODULE_BY_ID: (id) => `${API_BASE_URL}/FormModule/${id}`,
+    FORM_MODULE_PERMANENT_DELETE: (id) => `${API_BASE_URL}/FormModule/permanent/${id}`,
     
     // Permissions
     PERMISSIONS: `${API_BASE_URL}/Permission`,
@@ -69,7 +66,8 @@ const API_ENDPOINTS = {
     
     // Logins
     LOGINS: `${API_BASE_URL}/Login`,
-    LOGIN_BY_ID: (id) => `${API_BASE_URL}/Login/${id}`
+    LOGIN_BY_ID: (id) => `${API_BASE_URL}/Login/${id}`,
+    LOGIN_PERMANENT_DELETE: (id) => `${API_BASE_URL}/Login/permanent/${id}`
 };
 
 // Default Pagination Settings
@@ -565,5 +563,68 @@ function onDocumentReady(callback) {
         callback();
     } else {
         document.addEventListener('DOMContentLoaded', callback);
+    }
+}
+
+
+// Add to STORAGE_KEYS object at the top
+STORAGE_KEYS.DARK_MODE = 'securitypqr_dark_mode';
+
+// Dark mode functions
+function isDarkMode() {
+    return localStorage.getItem(STORAGE_KEYS.DARK_MODE) === 'true';
+}
+
+function toggleDarkMode() {
+    const isDark = !isDarkMode();
+    localStorage.setItem(STORAGE_KEYS.DARK_MODE, isDark);
+    applyDarkMode(isDark);
+    updateDarkModeToggle(isDark);
+}
+
+function applyDarkMode(isDark) {
+    if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+    }
+}
+
+function updateDarkModeToggle(isDark) {
+    const toggleBtn = document.getElementById('theme-toggle-btn');
+    if (toggleBtn) {
+        if (isDark) {
+            toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            toggleBtn.setAttribute('title', 'Cambiar a modo claro');
+        } else {
+            toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+            toggleBtn.setAttribute('title', 'Cambiar a modo oscuro');
+        }
+    }
+}
+
+function initDarkMode() {
+    // Apply dark mode if saved
+    const isDark = isDarkMode();
+    applyDarkMode(isDark);
+    
+    // Setup toggle button
+    const toggleBtn = document.getElementById('theme-toggle-btn');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', toggleDarkMode);
+        updateDarkModeToggle(isDark);
+    }
+}
+
+// Modify the existing onDocumentReady function to initialize dark mode
+function onDocumentReady(callback) {
+    if (document.readyState !== 'loading') {
+        initDarkMode(); // Initialize dark mode
+        callback();
+    } else {
+        document.addEventListener('DOMContentLoaded', () => {
+            initDarkMode(); // Initialize dark mode
+            callback();
+        });
     }
 }
