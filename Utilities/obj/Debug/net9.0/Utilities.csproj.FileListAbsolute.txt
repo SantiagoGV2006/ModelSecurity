@@ -91,3 +91,4 @@ C:\Users\Santiago\source\repos\ModelSecurity\Utilities\obj\Debug\net9.0\Utilitie
 C:\Users\Santiago\source\repos\ModelSecurity\Utilities\obj\Debug\net9.0\refint\Utilities.dll
 C:\Users\Santiago\source\repos\ModelSecurity\Utilities\obj\Debug\net9.0\Utilities.pdb
 C:\Users\Santiago\source\repos\ModelSecurity\Utilities\obj\Debug\net9.0\ref\Utilities.dll
+C:\Users\Santiago\source\repos\ModelSecurity\Utilities\obj\Debug\net9.0\Utilities.sourcelink.json

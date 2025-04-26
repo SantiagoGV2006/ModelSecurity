@@ -77,3 +77,4 @@ C:\Users\Santiago\source\repos\ModelSecurity\Business\obj\Debug\net9.0\Business.
 C:\Users\Santiago\source\repos\ModelSecurity\Business\obj\Debug\net9.0\refint\Business.dll
 C:\Users\Santiago\source\repos\ModelSecurity\Business\obj\Debug\net9.0\Business.pdb
 C:\Users\Santiago\source\repos\ModelSecurity\Business\obj\Debug\net9.0\ref\Business.dll
+C:\Users\Santiago\source\repos\ModelSecurity\Business\obj\Debug\net9.0\Business.sourcelink.json

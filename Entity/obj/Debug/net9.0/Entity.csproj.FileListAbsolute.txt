@@ -115,3 +115,4 @@ C:\Users\Santiago\source\repos\ModelSecurity\Entity\obj\Debug\net9.0\refint\Enti
 C:\Users\Santiago\source\repos\ModelSecurity\Entity\obj\Debug\net9.0\Entity.pdb
 C:\Users\Santiago\source\repos\ModelSecurity\Entity\obj\Debug\net9.0\Entity.genruntimeconfig.cache
 C:\Users\Santiago\source\repos\ModelSecurity\Entity\obj\Debug\net9.0\ref\Entity.dll
+C:\Users\Santiago\source\repos\ModelSecurity\Entity\obj\Debug\net9.0\Entity.sourcelink.json

@@ -139,3 +139,4 @@ C:\Users\Santiago\source\repos\ModelSecurity\Data\obj\Debug\net9.0\refint\Data.d
 C:\Users\Santiago\source\repos\ModelSecurity\Data\obj\Debug\net9.0\Data.pdb
 C:\Users\Santiago\source\repos\ModelSecurity\Data\obj\Debug\net9.0\Data.genruntimeconfig.cache
 C:\Users\Santiago\source\repos\ModelSecurity\Data\obj\Debug\net9.0\ref\Data.dll
+C:\Users\Santiago\source\repos\ModelSecurity\Data\obj\Debug\net9.0\Data.sourcelink.json
